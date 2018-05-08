@@ -1,0 +1,2286 @@
+/*============    RESET    ===========*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+a:hover,
+a:link,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+/* hide horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+/*============    FONTS    ===========*/
+@font-face {
+  font-family: 'Roboto Black';
+  src: url('../fonts/Roboto-Black.eot');
+  src: url('../fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Black.woff') format('woff'), url('../fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('../fonts/Roboto-Light.eot');
+  src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Light.woff') format('woff'), url('../fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('../fonts/Roboto-Regular.eot');
+  src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Roboto-Regular.woff') format('woff'), url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('../fonts/roboto-medium.eot');
+  src: url('../fonts/roboto-medium.eot?#iefix') format('embedded-opentype'), url('../fonts/roboto-medium.woff') format('woff'), url('../fonts/roboto-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+/*Variables for fonts*/
+.robotoReg {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+}
+.robotoL {
+  font-family: 'Roboto Light';
+  font-weight: 300;
+}
+.robotoB {
+  font-family: 'Roboto Black';
+  font-weight: 900;
+}
+.robotoM {
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+}
+/*Variables for colors*/
+.black {
+  color: #232323;
+}
+.bgblack {
+  background: #000000;
+}
+.white {
+  color: #ffffff;
+}
+.bgWhite {
+  background: #ffffff;
+}
+.grey {
+  color: #474747;
+}
+.orange {
+  color: #ff4000;
+}
+.orangeCal {
+  color: #cd3810;
+}
+.orangeBg {
+  background: #ff4000;
+}
+.h1 {
+  font-family: 'Roboto Black';
+  font-weight: 900;
+  font-size: 112px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.h2 {
+  font-family: 'Roboto Black';
+  font-weight: 900;
+  font-size: 73px;
+  color: #bebebe;
+  text-transform: uppercase;
+}
+.h3 {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-size: 54px;
+}
+.h4 {
+  font-family: 'Roboto Black';
+  font-weight: 900;
+  font-size: 40px;
+  color: #232323;
+  text-transform: uppercase;
+}
+.h5 {
+  font-family: 'Roboto Light';
+  font-weight: 300;
+  font-size: 30px;
+  color: #ff4000;
+  line-height: 35px;
+}
+.h6 {
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+  font-size: 20px;
+  color: #ff4000;
+  line-height: 1.5em;
+}
+p {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-size: 17px;
+  color: #474747;
+  line-height: 1.6em;
+}
+.month {
+  text-transform: capitalize;
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4em;
+}
+.registrieren {
+  background: #e63312;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.registrieren:hover {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 2px solid #ff2800;
+  background: #ffffff;
+  color: #ff4000;
+}
+.registrieren:focus {
+  font-style: italic;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 2px solid #ff2800;
+  background: #ffffff;
+  color: #ff4000;
+}
+.demnachst {
+  background: #cecece;
+  cursor: no-drop;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.demnachst:hover {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.registrieren,
+.demnachst {
+  width: 90%;
+  text-align: center;
+  margin: 30px 0 0 25px;
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-size: 22px;
+  text-transform: capitalize;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  display: block;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+.registrierenMain {
+  margin-left: 15px;
+}
+/*animated header text start*/
+.headerTextWrap {
+  margin-top: 50px;
+  text-align: center;
+}
+.headerTextLeft,
+.headerTextRight {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+.headerTextLeft img,
+.headerTextRight img {
+  height: 70px;
+}
+.headerTextLeft img {
+  margin-bottom: 30px;
+}
+/*animated header text end*/
+.currentDate {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 12px 20px;
+  width: 40%;
+}
+.currentDate .day {
+  font-size: 50px;
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+  line-height: 1.4em;
+}
+.currentDate .year {
+  font-size: 15px;
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4em;
+}
+.eventsJoinAccess {
+  margin: 0 auto;
+  max-width: 660px;
+  background: #ffffff;
+  padding: 30px 45px 35px 45px;
+  -webkit-box-shadow: 2px 3px 162px 17px rgba(0, 0, 0, 0.19);
+  box-shadow: 2px 3px 162px 17px rgba(0, 0, 0, 0.19);
+  text-align: center;
+  z-index: 1;
+}
+.eventsJoinAccess .h6 {
+  margin-bottom: 25px;
+}
+.eventsJoinAccess .h3 {
+  color: #474747;
+  padding-bottom: 15px;
+  margin-top: 15px;
+}
+.eventsJoinAccess .email {
+  border: none;
+  background: #f5f5f5;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-family: 'Roboto Light';
+  font-weight: 300;
+  font-size: 20px;
+}
+.eventsJoinAccess ::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-family: 'Roboto Light';
+  font-weight: 300;
+  font-size: 20px;
+  color: #474747;
+}
+.eventsJoinAccess ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: 'Roboto Light';
+  font-weight: 300;
+  font-size: 20px;
+  color: #474747;
+}
+.eventsJoinAccess :-ms-input-placeholder {
+  /* IE 10+ */
+  font-family: 'Roboto Light';
+  font-weight: 300;
+  font-size: 20px;
+  color: #474747;
+}
+.eventsJoinAccess :-moz-placeholder {
+  /* Firefox 18- */
+  font-family: 'Roboto Light';
+  font-weight: 300;
+  font-size: 20px;
+  color: #474747;
+}
+.eventsJoinAccess .signMeUp {
+  width: 200px;
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  background: #e63312;
+  padding: 15px;
+  display: block;
+  border: solid 2px #e63312;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  z-index: 2  ;
+  left: 0;
+  right: 0;
+  bottom: -34px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.eventsJoinAccess .signMeUp:hover {
+  background: #ff2800;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 2px solid #ff2800;
+  background: #ffffff;
+  color: #ff4000;
+}
+.eventsJoinAccess .signMeUp:focus {
+  font-style: italic;
+}
+.logo {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+/* Header Section Start*/
+header .headerFluid {
+  min-height: 75px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #000000;
+}
+header .headerFluid .headerContainer {
+  max-width: 1400px;
+}
+header .headerFluid .headerContainer .headerWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+header .headerFluid .headerContainer .logo img {
+  height: 44px;
+}
+/* Header Section End*/
+/*Events Section Start*/
+.eventsFluid {
+  background: url("../img/eventsBg.png") no-repeat center top;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  min-height: 780px;
+  background-attachment: fixed;
+}
+.eventsFluid .eventsContainer .h5 {
+  font-size: 40px;
+  color: #ffffff;
+  font-family: 'Roboto Black';
+  font-weight: 900;
+  margin-top: 190px;
+  line-height: 2em;
+}
+.eventsFluid .eventsContainer .h1 {
+  margin-top: 410px;
+}
+.eventsFluid .eventsContainer .eventsJoinAccessCol {
+  position: relative;
+}
+.eventsFluid .eventsContainer .eventsJoinAccess {
+  margin-top: 250px;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 20px 60px 40px 60px;
+  -webkit-box-shadow: 2px 3px 162px 17px rgba(0, 0, 0, 0.19);
+  box-shadow: 2px 3px 162px 17px rgba(0, 0, 0, 0.19);
+  z-index: 1;
+}
+/* Events Section End*/
+/*Next Events Section Start*/
+.nextEventsFluid {
+  background: #ffffff;
+  width: 100%;
+  min-height: 617px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin-top: -250px;
+}
+.nextEventsFluid .nextEventsContainer .h2 {
+  padding-bottom: 40px;
+}
+.nextEventsFluid .nextEventsContainer .nextEventInner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background: #f5f5f5;
+  min-height: 140px;
+  padding: 30px;
+  margin-bottom: 22px;
+}
+.nextEventsFluid .nextEventsContainer .calendarTitleInner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 47%;
+  margin-right: 20px;
+}
+.nextEventsFluid .nextEventsContainer .calendarDateInner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 35%;
+}
+.nextEventsFluid .nextEventsContainer .imgCalendarTitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.nextEventsFluid .nextEventsContainer .currentDatecalendarDateInner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 15px;
+}
+.nextEventsFluid .nextEventsContainer .desc p {
+  margin-bottom: 5px;
+  color: #474747;
+}
+.nextEventsFluid .nextEventsContainer .imgCalendar img {
+  margin-right: 20px;
+  width: 115px;
+  height: 115px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.nextEventsFluid .nextEventsContainer .h5 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.nextEventsFluid .nextEventsContainer .h6 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.nextEventsFluid .nextEventsContainer .currentDate {
+  margin-right: 25px;
+  width: 40%;
+}
+.nextEventsFluid .nextEventsContainer .calendarDescription {
+  width: 50%;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  text-align: justify;
+}
+/*Next Events Section End*/
+/* calendarFluid Section Start*/
+.calendarFluid {
+  background: url("../img/calendarbg.png") no-repeat center top;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  min-height: 417px;
+  background-attachment: fixed;
+}
+.calendarFluid .calendarContainer .h2 {
+  font-size: 85px;
+  color: #ffffff;
+  margin-top: 275px;
+  font-size: 95px;
+}
+/* calendarFluid Section End*/
+/* calendarEventsFluid Section Start*/
+.calendarEventsFluid {
+  padding-top: 20px;
+  padding-bottom: 180px;
+  background: #ffffff;
+}
+.calendarEventsFluid .calendarEventsContainer .h5 {
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+  font-size: 24px;
+}
+.calendarEventsFluid .calendarEventsContainer .h6 {
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+  font-size: 20px;
+}
+.calendarEventsFluid .calendarEventsContainer .h4 {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.calendarEventsFluid .calendarEventsContainer p {
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+}
+.calendarEventsFluid .calendarEventsContainer .upcomingEvents .h5 {
+  color: #ff4000;
+}
+.calendarEventsFluid .calendarEventsContainer .upcomingEvents .h6 {
+  color: #474747;
+}
+.calendarEventsFluid .calendarEventsContainer .calendarWrapMore {
+  background: #f5f5f5;
+  min-height: 140px;
+  padding: 15px 26px 15px 26px;
+  margin-bottom: 22px;
+}
+.calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarDateInnerDesc {
+  display: none;
+  padding: 20px 10px 30px 10px;
+}
+.calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarDateInnerDesc .location {
+  padding-bottom: 20px;
+}
+.calendarEventsFluid .calendarEventsContainer .soldOut .h5,
+.calendarEventsFluid .calendarEventsContainer .soldOut .h6,
+.calendarEventsFluid .calendarEventsContainer .soldOut p {
+  color: #bebebe;
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+}
+.calendarEventsFluid .calendarEventsContainer .calendarTitleInner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50%;
+  margin-right: 20px;
+}
+.calendarEventsFluid .calendarEventsContainer .calendarDateInner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 50%;
+}
+.calendarEventsFluid .calendarEventsContainer .currentDate {
+  margin-right: 10px;
+}
+.calendarEventsFluid .calendarEventsContainer .desc {
+  margin-right: 10px;
+  width: 40%;
+}
+.calendarEventsFluid .calendarEventsContainer .desc p {
+  margin-bottom: 5px;
+  color: #a9a7a9;
+}
+.calendarEventsFluid .calendarEventsContainer .imgCalendar img {
+  margin-right: 20px;
+  width: 115px;
+  height: 115px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.calendarEventsFluid .calendarEventsContainer .h5 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.calendarEventsFluid .calendarEventsContainer .h6 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.calendarEventsFluid .calendarEventsContainer .plusWrap {
+  width: 20%;
+}
+.calendarEventsFluid .calendarEventsContainer .plus {
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  background: #ff4000;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-left: 15px;
+}
+.calendarEventsFluid .calendarEventsContainer .plus:hover {
+  background: #ff2800;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.calendarEventsFluid .calendarEventsContainer .plus span {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+  font-size: 40px;
+  color: #ffffff;
+  margin-right: 1px;
+}
+/* calendarEventsFluid Section End*/
+/* greyEventsFluid Section Start*/
+.greyEventsFluid {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #363636;
+  width: 100%;
+}
+.greyEventsFluid .greyEventsContainer {
+  min-height: 450px;
+  position: relative;
+}
+.greyEventsFluid .greyEventsContainer .eventsJoinAccess {
+  width: 100%;
+  max-width: 570px;
+  position: absolute;
+  top: -130px;
+  left: 0;
+  right: 0;
+}
+.greyEventsFluid .greyEventsContainer .social {
+  height: 407px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  text-align: center;
+}
+.greyEventsFluid .greyEventsContainer .social .fa {
+  color: #ffffff;
+  font-size: 28px;
+  -moz-transition: all 0.2s 0.02s ease;
+  -o-transition: all 0.2s 0.02s ease;
+  -webkit-transition: all 0.2s 0.02s ease;
+}
+.greyEventsFluid .greyEventsContainer .social .fa:hover {
+  color: #ff4000;
+  -moz-transition: all 0.2s 0.02s ease;
+  -o-transition: all 0.2s 0.02s ease;
+  -webkit-transition: all 0.2s 0.02s ease;
+}
+.greyEventsFluid .greyEventsContainer .social ul li {
+  display: inline-block;
+  margin-right: 30px;
+}
+.greyEventsFluid .greyEventsContainer .social ul li:last-child {
+  margin-right: 0;
+}
+/* greyEventsFluid Section End*/
+/* Media queries for Home SECTION*/
+@media (min-width: 0px) and (max-width: 320px) {
+  .h6 {
+    font-size: 17px;
+  }
+  .registrieren,
+  .demnachst {
+    padding: 12px 15px;
+    max-width: 230px;
+    font-size: 18px;
+    margin: 20px auto 0 auto;
+  }
+  .registrierenMain {
+    width: 100%;
+  }
+  .headerTextWrap {
+    margin-top: 142px;
+    margin-bottom: 41px;
+  }
+  .headerTextLeft img,
+  .headerTextRight img {
+    height: 40px;
+  }
+  .eventsJoinAccess .h3 {
+    font-size: 30px;
+  }
+  .eventsJoinAccess .h6 {
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+  .eventsJoinAccess .email {
+    padding: 14px 25px;
+  }
+  .eventsJoinAccess .signMeUp {
+    padding: 12px 15px;
+    max-width: 200px;
+    width: 100%;
+  }
+  /*General Media Settigns start*/
+  /*General Media Settigns end*/
+  /*Header Section Start*/
+  header .KickstarterFluid {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    padding-top: 90px;
+  }
+  header .KickstarterFluid .KickstarterContainer .Kickstarter {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  header .headerFluid {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  /*Header Section End*/
+  /*Events Section Start*/
+  .eventsFluid {
+    padding-bottom: 30px;
+    min-height: 800px;
+  }
+  .eventsFluid .eventsContainer .h5 {
+    font-size: 27px;
+    margin-top: 160px;
+  }
+  .eventsFluid .eventsContainer .h1 {
+    margin-top: 90px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 50px;
+  }
+  .eventsFluid .eventsContainer .h3 {
+    font-size: 30px;
+  }
+  .eventsFluid .eventsContainer .eventsJoinAccess {
+    padding: 10px 15px 20px 15px;
+    position: static;
+    max-width: 100%;
+    margin-top: 0;
+  }
+  .eventsFluid .eventsContainer .signMeUp {
+    position: static;
+    max-width: 100%;
+    border: 2px solid #ff2800;
+  }
+  .eventsFluid .eventsContainer .eventsJoinAccessCol {
+    width: 100%;
+  }
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .eventsJoinAccess .h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .eventsJoinAccess .email {
+    font-size: 16px;
+  }
+  .eventsJoinAccess ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 16px;
+  }
+  .eventsJoinAccess ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 16px;
+  }
+  .eventsJoinAccess :-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 16px;
+  }
+  .eventsJoinAccess :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 16px;
+  }
+  .eventsJoinAccess .signMeUp {
+    position: static;
+    font-size: 16px;
+  }
+  /* eventsJoinAccess End*/
+  /*Next Events Section Start*/
+  .nextEventsFluid {
+    padding-top: 15px;
+  }
+  .nextEventsFluid .nextEventsContainer .h2 {
+    font-size: 48px;
+    padding-bottom: 15px;
+  }
+  .nextEventsFluid .nextEventsContainer .imgCalendarTitle {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .nextEventsFluid .nextEventsContainer .imgCalendar {
+    padding-bottom: 15px;
+    margin: 0 auto;
+  }
+  .nextEventsFluid .nextEventsContainer .title {
+    text-align: center;
+  }
+  .nextEventsFluid .nextEventsContainer .h5 {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .nextEventsFluid .nextEventsContainer .h6 {
+    font-size: 20px;
+  }
+  .nextEventsFluid .nextEventsContainer p {
+    font-size: 16px;
+  }
+  .nextEventsFluid .nextEventsContainer .calendarTitleInner {
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .currentDatecalendarDateInner {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .nextEventsFluid .nextEventsContainer .currentDate {
+    width: 40%;
+    margin-bottom: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    margin-right: 0;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+  .nextEventsFluid .nextEventsContainer .currentDate p {
+    margin: 0 5px;
+  }
+  .nextEventsFluid .nextEventsContainer .plusWrap {
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .plus {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+  .nextEventsFluid .nextEventsContainer .plus span {
+    font-size: 23px;
+  }
+  .nextEventsFluid .nextEventsContainer .calendarDateInner {
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .nextEventInner {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 25px;
+  }
+  .nextEventsFluid .nextEventsContainer .calendarDescription {
+    width: 100%;
+    padding-top: 20px;
+  }
+  /*calendarFluid start*/
+  .calendarFluid {
+    background: #ff4000;
+    min-height: 0;
+  }
+  .calendarFluid .calendarContainer .h2 {
+    margin: 0;
+    font-size: 40px;
+    padding: 20px 0;
+    text-align: center;
+  }
+  /*calendarFluid end*/
+  /* calendarEventsFluid Section Start*/
+  .calendarEventsFluid {
+    padding-bottom: 8px;
+  }
+  .calendarEventsFluid .calendarEventsContainer p {
+    font-size: 16px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h4 {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore {
+    padding: 25px 10px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarWrap {
+    text-align: center;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarDateInnerDesc {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarTitleInner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarDateInner {
+    width: 100%;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .calendarEventsFluid .calendarEventsContainer .imgCalendar img {
+    margin-bottom: 10px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .desc {
+    width: 40%;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .calendarEventsFluid .calendarEventsContainer .desc p {
+    margin: 0 5px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate {
+    width: 40%;
+    margin-bottom: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    margin-right: 0;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate p {
+    margin: 0 5px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plusWrap {
+    width: 100%;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plus {
+    width: 100%;
+    max-width: 200px;
+    height: 37px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plus span {
+    font-size: 21px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h5 {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h6 {
+    font-size: 20px;
+  }
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    max-width: 92%;
+    padding: 20px;
+  }
+  .eventsJoinAccess .h3 {
+    text-align: center;
+  }
+  .eventsJoinAccess .email {
+    font-size: 16px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+  }
+  .eventsJoinAccess ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 16px;
+  }
+  .eventsJoinAccess ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 16px;
+  }
+  .eventsJoinAccess :-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 16px;
+  }
+  .eventsJoinAccess :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 16px;
+  }
+  .eventsJoinAccess .signMeUp {
+    position: static;
+    font-size: 16px;
+  }
+  /* eventsJoinAccess End*/
+  /* calendarEventsFluid Section End*/
+  .greyEventsFluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .greyEventsFluid .greyEventsContainer {
+    min-height: 150px;
+  }
+  .greyEventsFluid .greyEventsContainer .eventsJoinAccess {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    position: static;
+  }
+  .greyEventsFluid .greyEventsContainer .eventsJoinAccess .email {
+    margin-bottom: 15px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+  }
+  .greyEventsFluid .greyEventsContainer .social {
+    margin-top: 60px;
+    height: auto;
+  }
+}
+@media (min-width: 321px) and (max-width: 480px) {
+  .h6 {
+    font-size: 17px;
+  }
+  .registrieren,
+  .demnachst {
+    padding: 12px 15px;
+    max-width: 230px;
+    font-size: 18px;
+    margin: 20px auto 0 auto;
+  }
+  .registrierenMain {
+    width: 100%;
+  }
+  .headerTextWrap {
+    margin-top: 142px;
+    margin-bottom: 41px;
+  }
+  .headerTextLeft img,
+  .headerTextRight img {
+    height: 40px;
+  }
+  .eventsJoinAccess .h3 {
+    font-size: 30px;
+  }
+  .eventsJoinAccess .h6 {
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+  .eventsJoinAccess .email {
+    padding: 14px 25px;
+  }
+  .eventsJoinAccess .signMeUp {
+    padding: 12px 15px;
+    max-width: 200px;
+    width: 100%;
+  }
+  /*General Media Settigns start*/
+  /*General Media Settigns end*/
+  /*Header Section Start*/
+  header .KickstarterFluid {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    padding-top: 90px;
+  }
+  header .KickstarterFluid .KickstarterContainer .Kickstarter {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  header .headerFluid {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  /*Header Section End*/
+  /*Events Section Start*/
+  .eventsFluid {
+    padding-bottom: 30px;
+    min-height: 800px;
+  }
+  .eventsFluid .eventsContainer .h5 {
+    font-size: 27px;
+    margin-top: 160px;
+  }
+  .eventsFluid .eventsContainer .h1 {
+    margin-top: 90px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 50px;
+  }
+  .eventsFluid .eventsContainer .h3 {
+    font-size: 30px;
+  }
+  .eventsFluid .eventsContainer .eventsJoinAccess {
+    padding: 10px 15px 20px 15px;
+    position: static;
+    max-width: 100%;
+    margin-top: 0;
+  }
+  .eventsFluid .eventsContainer .signMeUp {
+    position: static;
+    max-width: 100%;
+    border: 2px solid #ff2800;
+  }
+  .eventsFluid .eventsContainer .eventsJoinAccessCol {
+    width: 100%;
+  }
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .eventsJoinAccess .h3 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .eventsJoinAccess .email {
+    font-size: 16px;
+  }
+  .eventsJoinAccess ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 16px;
+  }
+  .eventsJoinAccess ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 16px;
+  }
+  .eventsJoinAccess :-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 16px;
+  }
+  .eventsJoinAccess :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 16px;
+  }
+  .eventsJoinAccess .signMeUp {
+    position: static;
+    font-size: 16px;
+  }
+  /* eventsJoinAccess End*/
+  /*Next Events Section Start*/
+  .nextEventsFluid {
+    padding-top: 15px;
+  }
+  .nextEventsFluid .nextEventsContainer .h2 {
+    font-size: 48px;
+    padding-bottom: 15px;
+  }
+  .nextEventsFluid .nextEventsContainer .imgCalendarTitle {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .nextEventsFluid .nextEventsContainer .imgCalendar {
+    padding-bottom: 15px;
+    margin: 0 auto;
+  }
+  .nextEventsFluid .nextEventsContainer .title {
+    text-align: center;
+  }
+  .nextEventsFluid .nextEventsContainer .h5 {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .nextEventsFluid .nextEventsContainer .h6 {
+    font-size: 20px;
+  }
+  .nextEventsFluid .nextEventsContainer p {
+    font-size: 16px;
+  }
+  .nextEventsFluid .nextEventsContainer .calendarTitleInner {
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .currentDatecalendarDateInner {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 0;
+  }
+  .nextEventsFluid .nextEventsContainer .currentDate {
+    width: 40%;
+    margin-bottom: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    margin-right: 0;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+  .nextEventsFluid .nextEventsContainer .currentDate p {
+    margin: 0 5px;
+  }
+  .nextEventsFluid .nextEventsContainer .plusWrap {
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .plus {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+  .nextEventsFluid .nextEventsContainer .plus span {
+    font-size: 23px;
+  }
+  .nextEventsFluid .nextEventsContainer .calendarDateInner {
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .nextEventInner {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 25px;
+  }
+  .nextEventsFluid .nextEventsContainer .calendarDescription {
+    width: 100%;
+    padding-top: 20px;
+  }
+  /*calendarFluid start*/
+  .calendarFluid {
+    background: #ff4000;
+    min-height: 0;
+  }
+  .calendarFluid .calendarContainer .h2 {
+    margin: 0;
+    font-size: 40px;
+    padding: 20px 0;
+    text-align: center;
+  }
+  /*calendarFluid end*/
+  /* calendarEventsFluid Section Start*/
+  .calendarEventsFluid {
+    padding-bottom: 8px;
+  }
+  .calendarEventsFluid .calendarEventsContainer p {
+    font-size: 16px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h4 {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore {
+    padding: 25px 10px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarWrap {
+    text-align: center;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarDateInnerDesc {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarTitleInner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarDateInner {
+    width: 100%;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .calendarEventsFluid .calendarEventsContainer .imgCalendar img {
+    margin-bottom: 10px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .desc {
+    width: 40%;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .calendarEventsFluid .calendarEventsContainer .desc p {
+    margin: 0 5px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate {
+    width: 40%;
+    margin-bottom: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    margin-right: 0;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate p {
+    margin: 0 5px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plusWrap {
+    width: 100%;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plus {
+    width: 100%;
+    max-width: 200px;
+    height: 37px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plus span {
+    font-size: 21px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h5 {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h6 {
+    font-size: 20px;
+  }
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    max-width: 92%;
+    padding: 20px;
+  }
+  .eventsJoinAccess .h3 {
+    text-align: center;
+  }
+  .eventsJoinAccess .email {
+    font-size: 16px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+  }
+  .eventsJoinAccess ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 16px;
+  }
+  .eventsJoinAccess ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 16px;
+  }
+  .eventsJoinAccess :-ms-input-placeholder {
+    /* IE 10+ */
+    font-size: 16px;
+  }
+  .eventsJoinAccess :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 16px;
+  }
+  .eventsJoinAccess .signMeUp {
+    position: static;
+    font-size: 16px;
+  }
+  /* eventsJoinAccess End*/
+  /* calendarEventsFluid Section End*/
+  .greyEventsFluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .greyEventsFluid .greyEventsContainer {
+    min-height: 150px;
+  }
+  .greyEventsFluid .greyEventsContainer .eventsJoinAccess {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    position: static;
+  }
+  .greyEventsFluid .greyEventsContainer .eventsJoinAccess .email {
+    margin-bottom: 15px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+  }
+  .greyEventsFluid .greyEventsContainer .social {
+    margin-top: 60px;
+    height: auto;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .h1 {
+    font-size: 100px;
+  }
+  .registrieren,
+  .demnachst {
+    padding: 15px 20px;
+    font-size: 20px;
+    max-width: 250px;
+    margin: 20px auto 0 auto;
+  }
+  .headerTextWrap {
+    margin-top: 140px;
+    margin-bottom: 60px;
+  }
+  .headerTextLeft img,
+  .headerTextRight img {
+    height: 60px;
+  }
+  /*Header Section Start*/
+  header .KickstarterFluid {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -moz-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    padding-top: 90px;
+  }
+  header .KickstarterFluid .KickstarterContainer .Kickstarter {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  header .headerFluid {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+  }
+  /*Header Section End*/
+  /*Events Section Start*/
+  .eventsFluid {
+    min-height: 930px;
+    padding-bottom: 60px;
+  }
+  .eventsFluid .eventsContainer .h1 {
+    margin-top: 90px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .eventsFluid .eventsContainer .h3 {
+    font-size: 38px;
+  }
+  .eventsFluid .eventsContainer .eventsJoinAccess {
+    position: static;
+    margin-top: 0;
+  }
+  .eventsFluid .eventsContainer .signMeUp {
+    position: static;
+  }
+  .eventsFluid .eventsContainer .eventsJoinAccessCol {
+    max-width: 680px;
+  }
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    max-width: 100%;
+    padding: 35px;
+  }
+  .eventsJoinAccess .h3 {
+    text-align: center;
+    font-size: 50px;
+  }
+  .eventsJoinAccess .h6 {
+    margin-top: 0;
+  }
+  .eventsJoinAccess .email {
+    margin-bottom: 30px;
+  }
+  .eventsJoinAccess .signMeUp {
+    width: 100%;
+    max-width: 200px;
+  }
+  /* eventsJoinAccess End*/
+  /*Next Events Section Start*/
+  .nextEventsFluid {
+    padding-top: 30px;
+  }
+  .nextEventsFluid .nextEventsContainer .h2 {
+    font-size: 68px;
+    padding-bottom: 30px;
+  }
+  .nextEventsFluid .nextEventsContainer .imgCalendarTitle {
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .calendarTitleInner {
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .currentDatecalendarDateInner {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .nextEventInner {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .nextEventsFluid .nextEventsContainer .calendarDescription {
+    width: 100%;
+    padding-top: 20px;
+  }
+  /*calendarFluid start*/
+  .calendarFluid {
+    background: #ff4000;
+    min-height: 0;
+  }
+  .calendarFluid .calendarContainer .h2 {
+    margin: 0;
+    font-size: 55px;
+    padding: 20px 0;
+    text-align: center;
+  }
+  /*calendarFluid end*/
+  /* calendarEventsFluid Section Start*/
+  .calendarEventsFluid {
+    padding-bottom: 40px;
+  }
+  .calendarEventsFluid .calendarEventsContainer p {
+    font-size: 16px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h4 {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore {
+    padding: 25px 10px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarWrap {
+    text-align: center;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarDateInnerDesc {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarTitleInner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarDateInner {
+    width: 100%;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .calendarEventsFluid .calendarEventsContainer .imgCalendar img {
+    margin-bottom: 10px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .desc {
+    width: 40%;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .calendarEventsFluid .calendarEventsContainer .desc p {
+    margin: 0 5px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate {
+    width: 40%;
+    margin-bottom: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    margin-right: 0;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate p {
+    margin: 0 5px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plusWrap {
+    width: 100%;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plus {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plus span {
+    font-size: 23px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h5 {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h6 {
+    font-size: 20px;
+  }
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    width: 100%;
+  }
+  .eventsJoinAccess .h3 {
+    text-align: center;
+  }
+  .eventsJoinAccess .email {
+    margin-bottom: 30px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+  }
+  .eventsJoinAccess .signMeUp {
+    width: 100%;
+    position: static;
+  }
+  /* eventsJoinAccess End*/
+  /* calendarEventsFluid Section End*/
+  .greyEventsFluid .greyEventsContainer {
+    min-height: 450px;
+  }
+  .greyEventsFluid .greyEventsContainer .eventsJoinAccess {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    position: static;
+  }
+  .greyEventsFluid .greyEventsContainer .social {
+    margin-top: 70px;
+    height: auto;
+  }
+}
+/* Media queries */
+@media (min-width: 769px) and (max-width: 992px) {
+  .h3 {
+    font-size: 38px;
+  }
+  .headerTextLeft img,
+  .headerTextRight img {
+    height: 70px;
+  }
+  .registrieren,
+  .demnachst {
+    padding: 15px 25px;
+    font-size: 20px;
+    max-width: 300px;
+    margin: 20px auto 0 auto;
+  }
+  .headerTextWrap {
+    margin-top: 50px;
+    margin-bottom: 49px;
+  }
+  header .headerFluid .headerContainer .navMenu .ulNav li {
+    margin-right: 39px;
+  }
+  /*Events Section Start*/
+  .eventsFluid {
+    min-height: 820px;
+    padding-bottom: 60px;
+  }
+  .eventsFluid .eventsContainer .h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .eventsFluid .eventsContainer .eventsJoinAccess {
+    position: static;
+    margin-top: 0;
+  }
+  .eventsFluid .eventsContainer .signMeUp {
+    position: static;
+  }
+  .eventsFluid .eventsContainer .eventsJoinAccessCol {
+    max-width: 100%;
+  }
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    max-width: 100%;
+  }
+  .eventsJoinAccess .h3 {
+    text-align: center;
+  }
+  .eventsJoinAccess .email {
+    margin-bottom: 30px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+  }
+  .eventsJoinAccess .signMeUp {
+    width: 100%;
+    position: static;
+  }
+  /* eventsJoinAccess End*/
+  /*Next Events Section Start*/
+  .nextEventsFluid {
+    padding-top: 30px;
+  }
+  .nextEventsFluid .nextEventsContainer .h2 {
+    font-size: 68px;
+    padding-bottom: 30px;
+  }
+  .nextEventsFluid .nextEventsContainer .imgCalendarTitle {
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .calendarTitleInner {
+    width: 100%;
+  }
+  .nextEventsFluid .nextEventsContainer .currentDatecalendarDateInner {
+    width: 100%;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+  .nextEventsFluid .nextEventsContainer .nextEventInner {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .nextEventsFluid .nextEventsContainer .calendarDescription {
+    width: 100%;
+    padding-top: 20px;
+  }
+  /* calendarEventsFluid Section Start*/
+  .calendarEventsFluid {
+    padding-bottom: 50px;
+  }
+  .calendarEventsFluid .calendarEventsContainer p {
+    font-size: 16px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h4 {
+    padding-top: 0px;
+    padding-bottom: 30px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore {
+    padding: 25px 10px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarWrap {
+    text-align: center;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrapMore .calendarDateInnerDesc {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarTitleInner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarDateInner {
+    width: 100%;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .calendarEventsFluid .calendarEventsContainer .imgCalendar img {
+    margin-bottom: 10px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .desc {
+    width: 40%;
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .calendarEventsFluid .calendarEventsContainer .desc p {
+    margin: 0 5px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate {
+    width: 40%;
+    margin-bottom: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    margin-right: 0;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate p {
+    margin: 0 5px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate {
+    width: 40%;
+    margin-bottom: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 100%;
+    margin-right: 0;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate p {
+    margin: 0 5px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plusWrap {
+    width: 100%;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plus {
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+  .calendarEventsFluid .calendarEventsContainer .plus span {
+    font-size: 23px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h5 {
+    font-size: 23px;
+    line-height: 28px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .h6 {
+    font-size: 20px;
+  }
+  /* calendarEventsFluid Section End*/
+  /*calendarFluid start*/
+  .calendarFluid {
+    background: #ff4000;
+    min-height: 0;
+  }
+  .calendarFluid .calendarContainer .h2 {
+    margin: 0;
+    font-size: 64px;
+    padding: 30px 0;
+    text-align: center;
+  }
+  /*calendarFluid end*/
+  .greyEventsFluid .greyEventsContainer {
+    min-height: 450px;
+  }
+  .greyEventsFluid .greyEventsContainer .eventsJoinAccess {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    width: 100%;
+    position: static;
+  }
+  .greyEventsFluid .greyEventsContainer .social {
+    margin-top: 60px;
+    height: auto;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .nextEventsFluid {
+    padding-top: 60px;
+  }
+  .nextEventsFluid .nextEventsContainer .nextEventInner {
+    max-width: 900px;
+    margin-top: 30px;
+  }
+  .calendarEventsFluid .calendarEventsContainer .calendarWrap {
+    width: 96%;
+  }
+  .calendarEventsFluid .calendarEventsContainer .desc {
+    width: 40%;
+  }
+  .calendarEventsFluid .calendarEventsContainer .currentDate {
+    width: 40%;
+  }
+  .greyEventsFluid .greyEventsContainer .social {
+    height: 400px;
+  }
+  .greyEventsFluid .h3 {
+    text-align: center;
+  }
+}

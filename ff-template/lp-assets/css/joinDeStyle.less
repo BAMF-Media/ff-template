@@ -1,0 +1,467 @@
+/*============    RESET    ===========*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+
+}
+
+ol, ul {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+a:hover,
+a:link,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+/* hide horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/*============    FONTS    ===========*/
+
+@font-face {
+  font-family: 'Open Sans SemiBoldItalic';
+  src: url('../fonts/OpenSans-SemiBoldItalic.eot');
+  src: url('../fonts/OpenSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/OpenSans-SemiBoldItalic.woff2') format('woff2'),
+  url('../fonts/OpenSans-SemiBoldItalic.woff') format('woff'),
+  url('../fonts/OpenSans-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/OpenSans-Bold.eot');
+  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+  url('../fonts/OpenSans-Bold.woff') format('woff'),
+  url('../fonts/OpenSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Black';
+  src: url('../fonts/Roboto-Black.eot');
+  src: url('../fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Black.woff') format('woff'),
+  url('../fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('../fonts/Roboto-Light.eot');
+  src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Light.woff') format('woff'),
+  url('../fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('../fonts/Roboto-Regular.eot');
+  src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Regular.woff') format('woff'),
+  url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('../fonts/roboto-medium.eot');
+  src: url('../fonts/roboto-medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/roboto-medium.woff') format('woff'),
+  url('../fonts/roboto-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*Variables for fonts*/
+.openSB {
+  font-family: 'Open Sans Bold';
+  font-weight: bold;
+  font-style: normal;
+
+}
+
+.robotoReg {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+}
+
+.robotoL {
+  font-family: 'Roboto Light';
+  font-weight: 300;
+}
+
+.robotoB {
+  font-family: 'Roboto Black';
+  font-weight: 900;
+}
+
+.robotoM {
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+}
+
+/*Variables for colors*/
+.black {
+  color: rgb(35, 35, 35);
+}
+
+.bgblack {
+  background: rgb(0, 0, 0);
+}
+
+.white {
+  color: rgb(255, 255, 255);
+}
+
+.bgWhite {
+  background: rgb(255, 255, 255);
+}
+
+.grey {
+  color: #474747;
+}
+
+.orange {
+  color: #ff4000;
+}
+
+.orangeCal {
+  color: #cd3810;
+}
+
+.orangeBg {
+  background: #ff4000;
+}
+
+.header-fluid {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../img/modernBg.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-bottom: 80px;
+
+}
+
+.headerWrap {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  /*position: fixed;*/
+  /*padding-left: 15px;*/
+  .logo {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    img {
+      height: 44px;
+    }
+  }
+}
+
+.headerContent {
+  margin-top: -75px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .header_text_position {
+    width: 100%;
+    //height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .h1, p, button {
+    color: #fff;
+  }
+  .h1 {
+    margin-top: 140px;
+    font-size: 37px;
+    text-align: center;
+    .openSB;
+    line-height: 1.4em;
+    width: 100%;
+    span {
+      display: block;
+    }
+    animation-delay: .3s;
+  }
+  .bottom_line {
+    animation-delay: .3s;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 17px;
+    text-align: center;
+    .robotoReg;
+    line-height: 1.6em;
+    span {
+      display: block;
+    }
+
+  }
+}
+
+.eventsJoinAccess {
+
+  .requestAccess {
+    position: relative;
+    background: #1e1e1e;
+    padding: 30px 30px 50px 30px;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: -1px 9px 14px -3px rgba(0, 0, 0, 0.55);
+    text-align: center;
+
+  }
+  p {
+    font-size: 13px;
+    .white;
+    .robotoReg;
+    line-height: 1.4em;
+  }
+  .h5 {
+    .openSB;
+    font-size: 18px;
+    .white;
+    line-height: 26px;
+
+  }
+  .arrow {
+    position: absolute;
+    background: #e32b12;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 133px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 29px;
+    }
+  }
+  .requestAccessForm {
+
+    .bgWhite;
+    padding: 40px;
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .labelText {
+    margin-bottom: 3px;
+    font-size: 14px;
+    .robotoReg;
+    color: #2e3360;
+
+  }
+  .email {
+    border: none;
+    background: #f5f5f5;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
+    .robotoL;
+    font-size: 18px;
+    .grey;
+    border-radius: 5px;
+  }
+
+  .getFreeTickets {
+    background: linear-gradient(to right, #ff6602, #e63011);
+    border: none;
+    width: 100%;
+    text-align: center;
+    .openSB;
+    font-size: 18px;
+    line-height: 1.6em;
+    .white;
+    padding: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    &:hover {
+      background: linear-gradient(to right, #ce5709, #b12912);
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  .header-fluid {
+    min-height: 0;
+    padding-bottom: 60px;
+  }
+
+  .headerContent {
+    .h1 {
+      margin-top: 160px;
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .header-fluid {
+    min-height: 0;
+    padding-bottom: 60px;
+  }
+
+  .headerContent {
+    .h1 {
+      margin-top: 140px;
+
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .header-fluid {
+    min-height: 0;
+    padding-bottom: 40px;
+  }
+
+  .headerContent {
+    .h1 {
+      margin-top: 120px;
+      font-size: 35px;
+
+    }
+    .bottom_line {
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .eventsJoinAccess {
+    p {
+      font-size: 11px;
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+  .header-fluid {
+    min-height: 0;
+    padding-bottom: 40px;
+  }
+
+  .headerContent {
+    .h1 {
+      margin-top: 100px;
+      font-size: 30px;
+
+    }
+    .bottom_line {
+      padding-top: 0;
+      padding-bottom: 15px;
+      font-size: 14px;
+    }
+  }
+
+  .eventsJoinAccess {
+
+    .arrow {
+      img {
+        height: 20px;
+      }
+    }
+    .requestAccessForm {
+      text-align: left;
+      padding: 25px;
+    }
+    .requestAccess {
+      padding: 20px 25px 40px 25px;
+    }
+    .arrow {
+      width: 40px;
+      height: 40px;
+      bottom: -20px;
+      top: auto;
+
+      .fa {
+        font-size: 21px;
+      }
+
+    }
+    text-align: center;
+    p {
+      font-size: 14px;
+    }
+    .getFreeTickets {
+      font-size: 15px;
+    }
+    .arrow {
+    }
+  }
+}
+ 

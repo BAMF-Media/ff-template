@@ -1,0 +1,2196 @@
+/*============    RESET    ===========*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+
+}
+
+ol, ul {
+  list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+a:hover,
+a:link,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+/* hide horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/*============    FONTS    ===========*/
+
+@font-face {
+  font-family: 'Roboto Black';
+  src: url('../fonts/Roboto-Black.eot');
+  src: url('../fonts/Roboto-Black.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Black.woff') format('woff'),
+  url('../fonts/Roboto-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Light';
+  src: url('../fonts/Roboto-Light.eot');
+  src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Light.woff') format('woff'),
+  url('../fonts/Roboto-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Regular';
+  src: url('../fonts/Roboto-Regular.eot');
+  src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Roboto-Regular.woff') format('woff'),
+  url('../fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Medium';
+  src: url('../fonts/roboto-medium.eot');
+  src: url('../fonts/roboto-medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/roboto-medium.woff') format('woff'),
+  url('../fonts/roboto-medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*Variables for fonts*/
+.robotoReg {
+  font-family: 'Roboto Regular';
+  font-weight: normal;
+}
+
+.robotoL {
+  font-family: 'Roboto Light';
+  font-weight: 300;
+}
+
+.robotoB {
+  font-family: 'Roboto Black';
+  font-weight: 900;
+}
+
+.robotoM {
+  font-family: 'Roboto Medium';
+  font-weight: 500;
+}
+
+/*Variables for colors*/
+.black {
+  color: rgb(35, 35, 35);
+}
+
+.bgblack {
+  background: rgb(0, 0, 0);
+}
+
+.white {
+  color: rgb(255, 255, 255);
+}
+
+.bgWhite {
+  background: rgb(255, 255, 255);
+}
+
+.grey {
+  color: #474747;
+}
+
+.orange {
+  color: #ff4000;
+}
+
+.orangeCal {
+  color: #cd3810;
+}
+
+.orangeBg {
+  background: #ff4000;
+}
+
+.h1 {
+  .robotoB;
+  font-size: 112px;
+  .white;
+  text-transform: uppercase;
+
+}
+
+.h2 {
+  .robotoB;
+  font-size: 73px;
+  color: #bebebe;
+  text-transform: uppercase;
+
+}
+
+.h3 {
+  .robotoReg;
+  font-size: 54px;
+}
+
+.h4 {
+  .robotoB;
+  font-size: 40px;
+  .black;
+  text-transform: uppercase;
+}
+
+.h5 {
+  .robotoL;
+  font-size: 30px;
+  .orange;
+  line-height: 35px;
+}
+
+.h6 {
+  .robotoM;
+  font-size: 20px;
+  color: #ff4000;
+  line-height: 1.5em;
+}
+
+p {
+  .robotoReg;
+  font-size: 17px;
+  .grey;
+  line-height: 1.6em;
+}
+
+span {
+
+}
+
+.month {
+  text-transform: capitalize;
+  .robotoM;
+  font-size: 20px;
+  line-height: 1.4em;
+
+}
+
+.registrieren{
+  background: #e63312;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  &:hover {
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    border: 2px solid #ff2800;
+    background: #ffffff;
+    .orange;
+  }
+  &:focus {
+    font-style: italic;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    border: 2px solid #ff2800;
+    background: #ffffff;
+    .orange;
+  }
+
+}
+
+.demnachst {
+  background: #cecece;
+  cursor: no-drop;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  &:hover {
+    //background: #ff2800;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+  }
+}
+
+.registrieren, .demnachst {
+  width: 90%;
+  text-align: center;
+  margin: 30px 0 0 25px;
+  .robotoReg;
+  font-size: 22px;
+  text-transform: capitalize;
+  .white;
+  border: none;
+  padding: 15px;
+  display: block;
+  border-radius: 5px;
+  border: 2px solid transparent;
+
+}
+
+.registrierenMain {
+  //width: 280px;
+  margin-left: 15px;
+}
+
+/*animated header text start*/
+.headerTextWrap {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.headerTextLeft, .headerTextRight {
+  -webkit-animation-duration: 1.5s;
+  -o-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+
+  -webkit-animation-delay: 0.2s;
+  -o-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+
+  img {
+    height: 70px;
+  }
+}
+
+.headerTextLeft {
+  img {
+    margin-bottom: 30px;
+  }
+}
+
+/*animated header text end*/
+
+.currentDate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 12px 20px;
+  width: 40%;
+  .day {
+    font-size: 50px;
+    .robotoM;
+    line-height: 1.4em;
+
+  }
+  .year {
+    font-size: 15px;
+    .robotoM;
+    font-size: 20px;
+    line-height: 1.4em;
+
+  }
+}
+
+.eventsJoinAccess {
+  margin: 0 auto;
+  max-width: 660px;
+  .bgWhite;
+  padding: 30px 45px 35px 45px;
+  -webkit-box-shadow: 2px 3px 162px 17px rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 2px 3px 162px 17px rgba(0, 0, 0, 0.19);
+  box-shadow: 2px 3px 162px 17px rgba(0, 0, 0, 0.19);
+  text-align: center;
+  z-index: 1;
+  .h6{
+    margin-bottom: 25px;
+  }
+  .h3 {
+    .grey;
+    padding-bottom: 15px;
+    margin-top: 15px;
+  }
+  .email {
+    border: none;
+    background: #f5f5f5;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    width: 100%;
+    .robotoL;
+    font-size: 20px;
+  }
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    .robotoL;
+    font-size: 20px;
+    .grey;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    .robotoL;
+    font-size: 20px;
+    .grey;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    .robotoL;
+    font-size: 20px;
+    .grey;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    .robotoL;
+    font-size: 20px;
+    .grey;
+  }
+  .signMeUp {
+    width: 200px;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    .robotoReg;
+    font-size: 22px;
+    text-transform: uppercase;
+    .white;
+    border: none;
+    background: #e63312;
+    padding: 15px;
+    display: block;
+    border: solid 2px #e63312;
+    border-radius: 5px;
+    z-index: 2  ;
+    left: 0;
+    right: 0;
+    bottom: -34px;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    &:hover {
+      background: #ff2800;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s;
+      border: 2px solid #ff2800;
+      background: #ffffff;
+      .orange;
+
+    }
+    &:focus {
+      font-style: italic;
+    }
+  }
+}
+
+.logo {
+  animation-delay: 1s;
+}
+
+/* Header Section Start*/
+header {
+  .headerFluid {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    .bgblack;
+    .headerContainer {
+      max-width: 1400px;
+      .headerWrap {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .logo {
+        img {
+          height: 44px;
+        }
+      }
+
+
+    }
+  }
+}
+
+/* Header Section End*/
+/*Events Section Start*/
+.eventsFluid {
+  background: url("../img/eventsBg.png") no-repeat center top;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  min-height: 780px;
+  background-attachment: fixed;
+  .eventsContainer {
+    .h5 {
+      font-size: 40px;
+      .white;
+      .robotoB;
+      margin-top: 190px;
+      line-height: 2em;
+    }
+    .h1 {
+      margin-top: 410px;
+    }
+    .eventsJoinAccessCol {
+      position: relative;
+    }
+    .eventsJoinAccess {
+      margin-top: 250px;
+      max-width: 600px;
+      background: #ffffff;
+      padding: 20px 60px 40px 60px;
+      -webkit-box-shadow: 2px 3px 162px 17px rgba(0, 0, 0, 0.19);
+      box-shadow: 2px 3px 162px 17px rgba(0, 0, 0, 0.19);
+      z-index: 1;
+    }
+  }
+}
+
+/* Events Section End*/
+/*Next Events Section Start*/
+
+.nextEventsFluid {
+
+  background: #ffffff;
+  width: 100%;
+  min-height: 617px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin-top: -250px;
+
+  .nextEventsContainer {
+    .h2 {
+      padding-bottom: 40px;
+
+    }
+
+    .nextEventInner {
+      display: flex;
+      justify-content: space-between;
+      background: #f5f5f5;
+      min-height: 140px;
+      padding: 30px;
+      margin-bottom: 22px;
+    }
+    .calendarTitleInner {
+      display: flex;
+      flex-direction: column;
+      width: 47%;
+      margin-right: 20px;
+    }
+    .calendarDateInner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 35%;
+    }
+
+    .imgCalendarTitle {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+    }
+    .currentDatecalendarDateInner {
+      display: flex;
+      align-items: center;
+      padding-left: 15px;
+    }
+    .desc {
+      p {
+        margin-bottom: 5px;
+        .grey;
+      }
+
+    }
+    .imgCalendar {
+      img {
+        margin-right: 20px;
+        width: 115px;
+        height: 115px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+    }
+    .h5 {
+      margin-top: 0;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+    .h6 {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .currentDate {
+      margin-right: 25px;
+      width: 40%;
+    }
+    .calendarDescription {
+      width: 50%;
+      align-self: flex-start;
+      text-align: justify;
+    }
+
+  }
+}
+
+/*Next Events Section End*/
+
+/* calendarFluid Section Start*/
+
+.calendarFluid {
+  background: url("../img/calendarbg.png") no-repeat center top;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  min-height: 417px;
+  background-attachment: fixed;
+  .calendarContainer {
+    .h2 {
+
+      font-size: 85px;
+      .white;
+      margin-top: 275px;
+      font-size: 95px;
+    }
+  }
+}
+
+/* calendarFluid Section End*/
+
+/* calendarEventsFluid Section Start*/
+
+.calendarEventsFluid {
+  padding-top: 20px;
+  padding-bottom: 180px;
+  background: #ffffff;
+  .calendarEventsContainer {
+    .h5 {
+      .robotoM;
+      font-size: 24px;
+    }
+    .h6 {
+      .robotoM;
+      font-size: 20px;
+    }
+    .h4 {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+    p {
+      .robotoM;
+    }
+    .upcomingEvents {
+      .h5 {
+        color: #ff4000;
+
+      }
+      .h6 {
+        color: #474747;
+      }
+    }
+
+    .calendarWrapMore {
+      background: #f5f5f5;
+      min-height: 140px;
+      padding: 15px 26px 15px 26px;
+      //-webkit-border-radius: 94px;
+      //-moz-border-radius: 94px;
+      //border-radius: 94px;
+      margin-bottom: 22px;
+      .calendarWrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .calendarDateInnerDesc {
+        display: none;
+        padding: 20px 10px 30px 10px;
+        .location {
+          padding-bottom: 20px;
+        }
+      }
+    }
+    .soldOut {
+      .h5, .h6, p {
+        color: #bebebe;
+        .robotoM;
+
+      }
+    }
+    .calendarTitleInner {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      margin-right: 20px;
+
+    }
+    .calendarDateInner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%;
+    }
+    .currentDate {
+      margin-right: 10px;
+    }
+
+    .desc {
+      margin-right: 10px;
+      width: 40%;
+
+      p {
+        margin-bottom: 5px;
+        color: #a9a7a9;
+
+      }
+    }
+    .imgCalendar {
+      img {
+        margin-right: 20px;
+        width: 115px;
+        height: 115px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+    }
+    .h5 {
+      margin-top: 0;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+    .h6 {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .plusWrap {
+      width: 20%;
+
+    }
+
+    .plus {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .orangeBg;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      margin-left: 15px;
+      &:hover {
+        background: #ff2800;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+      }
+
+      span {
+        .robotoReg;
+        font-size: 40px;
+        color: #ffffff;
+        margin-right: 1px;
+
+      }
+    }
+
+  }
+}
+
+/* calendarEventsFluid Section End*/
+/* greyEventsFluid Section Start*/
+.greyEventsFluid {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: #363636;
+  width: 100%;
+  .greyEventsContainer {
+    min-height: 450px;
+    position: relative;
+    .eventsJoinAccess {
+      width: 100%;
+      max-width: 570px;
+      position: absolute;
+      top: -130px;
+      left: 0;
+      right: 0;
+    }
+    .social {
+      height: 407px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      text-align: center;
+
+      .fa {
+        color: #ffffff;
+        font-size: 28px;
+        -moz-transition: all 0.2s 0.02s ease;
+        -o-transition: all 0.2s 0.02s ease;
+        -webkit-transition: all 0.2s 0.02s ease;
+        &:hover{
+          color: #ff4000;
+          -moz-transition: all 0.2s 0.02s ease;
+          -o-transition: all 0.2s 0.02s ease;
+          -webkit-transition: all 0.2s 0.02s ease;
+        }
+      }
+
+      ul {
+        li {
+          display: inline-block;
+          margin-right: 30px;
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+/* greyEventsFluid Section End*/
+
+/* Media queries for Home SECTION*/
+
+@media (min-width: 0px) and (max-width: 320px){
+  .h6{
+    font-size: 17px;
+  }
+  .registrieren, .demnachst {
+    padding: 12px 15px;
+    max-width: 230px;
+    font-size: 18px;
+    margin: 20px auto 0 auto;
+  }
+
+  .registrierenMain {
+    width: 100%;
+  }
+
+  .headerTextWrap {
+    margin-top: 142px;
+    margin-bottom: 41px;
+  }
+
+  .headerTextLeft, .headerTextRight {
+
+    img {
+      height: 40px;
+    }
+  }
+
+  .eventsJoinAccess {
+    .h3 {
+      font-size: 30px;
+    }
+    .h6{
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+    .email {
+      padding: 14px 25px;
+    }
+    .signMeUp {
+      padding: 12px 15px;
+      max-width: 200px;
+      width: 100%;
+
+    }
+  }
+
+  /*General Media Settigns start*/
+  /*General Media Settigns end*/
+  /*Header Section Start*/
+  header {
+    .KickstarterFluid {
+      order: 2;
+      padding-top: 90px;
+      .KickstarterContainer {
+        .Kickstarter {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+
+    }
+    .headerFluid {
+      position: fixed;
+      width: 100%;
+      z-index: 999;
+      .headerContainer {
+      }
+    }
+  }
+
+  /*Header Section End*/
+  /*Events Section Start*/
+  .eventsFluid {
+    padding-bottom: 30px;
+    min-height: 800px;
+    .eventsContainer {
+      .h5 {
+        font-size: 27px;
+        margin-top: 160px;
+      }
+      .h1 {
+        margin-top: 90px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 50px;
+      }
+      .h3 {
+        font-size: 30px;
+      }
+      .eventsJoinAccess {
+        padding: 10px 15px 20px 15px;
+        position: static;
+        max-width: 100%;
+        margin-top: 0;
+      }
+      .signMeUp {
+        position: static;
+        max-width: 100%;
+        border: 2px solid #ff2800;
+
+      }
+      .eventsJoinAccessCol {
+        width: 100%;
+      }
+    }
+
+  }
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    width: 100%;
+    padding: 10px 10px;
+    .h3 {
+      text-align: center;
+      font-size: 25px;
+    }
+    .email {
+      font-size: 16px;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-size: 16px;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      font-size: 16px;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      font-size: 16px;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      font-size: 16px;
+    }
+    .signMeUp {
+      position: static;
+      font-size: 16px;
+
+    }
+  }
+
+  /* eventsJoinAccess End*/
+  /*Next Events Section Start*/
+  .nextEventsFluid {
+    padding-top: 15px;
+    .nextEventsContainer {
+      .h2 {
+        font-size: 48px;
+        padding-bottom: 15px;
+      }
+      .imgCalendarTitle {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+      }
+      .imgCalendar {
+        padding-bottom: 15px;
+        margin: 0 auto;
+      }
+      .title {
+        text-align: center;
+      }
+      .h5 {
+        font-size: 23px;
+        line-height: 28px;
+      }
+      .h6 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .calendarTitleInner {
+        width: 100%;
+      }
+      .currentDatecalendarDateInner {
+        width: 100%;
+        flex-direction: column;
+        padding-left: 0;
+
+      }
+      .currentDate {
+        width: 40%;
+
+        margin-bottom: 20px;
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+        p {
+          margin: 0 5px;
+        }
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+      }
+      .plusWrap {
+        width: 100%;
+      }
+      .plus {
+        width: 100%;
+        max-width: 200px;
+        height: 40px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        margin: 0 auto;
+
+        span {
+          font-size: 23px;
+        }
+      }
+      .calendarDateInner {
+        //flex-direction: column;
+        width: 100%;
+      }
+      .nextEventInner {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 25px;
+      }
+      .calendarDescription {
+        width: 100%;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  /*calendarFluid start*/
+  .calendarFluid {
+    .orangeBg;
+    min-height: 0;
+    .calendarContainer {
+      .h2 {
+        margin: 0;
+        font-size: 40px;
+        padding: 20px 0;
+        text-align: center;
+      }
+    }
+  }
+
+  /*calendarFluid end*/
+  /* calendarEventsFluid Section Start*/
+  .calendarEventsFluid {
+    padding-bottom: 8px;
+    .calendarEventsContainer {
+      p {
+        font-size: 16px;
+      }
+      .h4 {
+        padding-top: 0;
+        padding-bottom: 20px;
+      }
+
+      .calendarWrapMore {
+        //border-radius: 20px;
+        padding: 25px 10px;
+
+        .calendarWrap {
+          text-align: center;
+          width: 100%;
+          flex-direction: column;
+
+        }
+        .calendarDateInnerDesc {
+          padding-top: 20px;
+          padding-bottom: 0;
+        }
+      }
+      .calendarTitleInner {
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 10px;
+        justify-content: space-around;
+        margin: 0 auto;
+
+      }
+      .calendarDateInner {
+
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .imgCalendar {
+        img {
+          margin-bottom: 10px;
+        }
+      }
+      .desc {
+        width: 40%;
+
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        p {
+          margin: 0 5px;
+        }
+
+      }
+
+      .currentDate {
+        width: 40%;
+
+        margin-bottom: 20px;
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+        p {
+          margin: 0 5px;
+        }
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+      }
+      .plusWrap {
+        width: 100%;
+      }
+      .plus {
+        width: 100%;
+        max-width: 200px;
+        height: 37px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        margin: 0 auto;
+
+        span {
+          font-size: 21px;
+        }
+      }
+
+      .h5 {
+        font-size: 23px;
+        line-height: 28px;
+      }
+      .h6 {
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    max-width: 92%;
+    padding: 20px;
+    .h3 {
+      text-align: center;
+    }
+    .email {
+      font-size: 16px;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-size: 16px;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      font-size: 16px;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      font-size: 16px;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      font-size: 16px;
+    }
+    .signMeUp {
+      position: static;
+      font-size: 16px;
+
+    }
+  }
+
+  /* eventsJoinAccess End*/
+  /* calendarEventsFluid Section End*/
+  .greyEventsFluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .greyEventsContainer {
+      min-height: 150px;
+      .eventsJoinAccess {
+        border-radius: 0;
+        position: static;
+
+        .email {
+          margin-bottom: 15px;
+          -webkit-border-radius: 7px;
+          -moz-border-radius: 7px;
+          border-radius: 7px;
+        }
+      }
+      .social {
+        margin-top: 60px;
+        height: auto;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 321px) and (max-width: 480px) {
+  .h6{
+    font-size: 17px;
+  }
+  .registrieren, .demnachst {
+    padding: 12px 15px;
+    max-width: 230px;
+    font-size: 18px;
+    margin: 20px auto 0 auto;
+  }
+
+  .registrierenMain {
+    width: 100%;
+  }
+
+  .headerTextWrap {
+    margin-top: 142px;
+    margin-bottom: 41px;
+  }
+
+  .headerTextLeft, .headerTextRight {
+
+    img {
+      height: 40px;
+    }
+  }
+
+  .eventsJoinAccess {
+    .h3 {
+      font-size: 30px;
+    }
+    .h6{
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+    .email {
+      padding: 14px 25px;
+    }
+    .signMeUp {
+      padding: 12px 15px;
+      max-width: 200px;
+      width: 100%;
+
+    }
+  }
+
+  /*General Media Settigns start*/
+  /*General Media Settigns end*/
+  /*Header Section Start*/
+  header {
+    .KickstarterFluid {
+      order: 2;
+      padding-top: 90px;
+      .KickstarterContainer {
+        .Kickstarter {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+
+    }
+    .headerFluid {
+      position: fixed;
+      width: 100%;
+      z-index: 999;
+      .headerContainer {
+      }
+    }
+  }
+
+  /*Header Section End*/
+  /*Events Section Start*/
+  .eventsFluid {
+    padding-bottom: 30px;
+    min-height: 800px;
+    .eventsContainer {
+      .h5 {
+        font-size: 27px;
+        margin-top: 160px;
+      }
+      .h1 {
+        margin-top: 90px;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 50px;
+      }
+      .h3 {
+        font-size: 30px;
+      }
+      .eventsJoinAccess {
+        padding: 10px 15px 20px 15px;
+        position: static;
+        max-width: 100%;
+        margin-top: 0;
+      }
+      .signMeUp {
+        position: static;
+        max-width: 100%;
+        border: 2px solid #ff2800;
+
+      }
+      .eventsJoinAccessCol {
+        width: 100%;
+      }
+    }
+
+  }
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    width: 100%;
+    padding: 10px 10px;
+    .h3 {
+      text-align: center;
+      font-size: 25px;
+    }
+    .email {
+      font-size: 16px;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-size: 16px;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      font-size: 16px;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      font-size: 16px;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      font-size: 16px;
+    }
+    .signMeUp {
+      position: static;
+      font-size: 16px;
+
+    }
+  }
+
+  /* eventsJoinAccess End*/
+  /*Next Events Section Start*/
+  .nextEventsFluid {
+    padding-top: 15px;
+    .nextEventsContainer {
+      .h2 {
+        font-size: 48px;
+        padding-bottom: 15px;
+      }
+      .imgCalendarTitle {
+        width: 100%;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+      }
+      .imgCalendar {
+        padding-bottom: 15px;
+        margin: 0 auto;
+      }
+      .title {
+        text-align: center;
+      }
+      .h5 {
+        font-size: 23px;
+        line-height: 28px;
+      }
+      .h6 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .calendarTitleInner {
+        width: 100%;
+      }
+      .currentDatecalendarDateInner {
+        width: 100%;
+        flex-direction: column;
+        padding-left: 0;
+
+      }
+      .currentDate {
+        width: 40%;
+
+        margin-bottom: 20px;
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+        p {
+          margin: 0 5px;
+        }
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+      }
+      .plusWrap {
+        width: 100%;
+      }
+      .plus {
+        width: 100%;
+        max-width: 200px;
+        height: 40px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        margin: 0 auto;
+
+        span {
+          font-size: 23px;
+        }
+      }
+      .calendarDateInner {
+        //flex-direction: column;
+        width: 100%;
+      }
+      .nextEventInner {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 25px;
+      }
+      .calendarDescription {
+        width: 100%;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  /*calendarFluid start*/
+  .calendarFluid {
+    .orangeBg;
+    min-height: 0;
+    .calendarContainer {
+      .h2 {
+        margin: 0;
+        font-size: 40px;
+        padding: 20px 0;
+        text-align: center;
+      }
+    }
+  }
+
+  /*calendarFluid end*/
+  /* calendarEventsFluid Section Start*/
+  .calendarEventsFluid {
+    padding-bottom: 8px;
+    .calendarEventsContainer {
+      p {
+        font-size: 16px;
+      }
+      .h4 {
+        padding-top: 0;
+        padding-bottom: 20px;
+      }
+
+      .calendarWrapMore {
+        //border-radius: 20px;
+        padding: 25px 10px;
+
+        .calendarWrap {
+          text-align: center;
+          width: 100%;
+          flex-direction: column;
+
+        }
+        .calendarDateInnerDesc {
+          padding-top: 20px;
+          padding-bottom: 0;
+        }
+      }
+      .calendarTitleInner {
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 10px;
+        justify-content: space-around;
+        margin: 0 auto;
+
+      }
+      .calendarDateInner {
+
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .imgCalendar {
+        img {
+          margin-bottom: 10px;
+        }
+      }
+      .desc {
+        width: 40%;
+
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        p {
+          margin: 0 5px;
+        }
+
+      }
+
+      .currentDate {
+        width: 40%;
+
+        margin-bottom: 20px;
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+        p {
+          margin: 0 5px;
+        }
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+      }
+      .plusWrap {
+        width: 100%;
+      }
+      .plus {
+        width: 100%;
+        max-width: 200px;
+        height: 37px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        margin: 0 auto;
+
+        span {
+          font-size: 21px;
+        }
+      }
+
+      .h5 {
+        font-size: 23px;
+        line-height: 28px;
+      }
+      .h6 {
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    max-width: 92%;
+    padding: 20px;
+    .h3 {
+      text-align: center;
+    }
+    .email {
+      font-size: 16px;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px;
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      font-size: 16px;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      font-size: 16px;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      font-size: 16px;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      font-size: 16px;
+    }
+    .signMeUp {
+      position: static;
+      font-size: 16px;
+
+    }
+  }
+
+  /* eventsJoinAccess End*/
+  /* calendarEventsFluid Section End*/
+  .greyEventsFluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .greyEventsContainer {
+      min-height: 150px;
+      .eventsJoinAccess {
+        border-radius: 0;
+        position: static;
+
+        .email {
+          margin-bottom: 15px;
+          -webkit-border-radius: 7px;
+          -moz-border-radius: 7px;
+          border-radius: 7px;
+        }
+      }
+      .social {
+        margin-top: 60px;
+        height: auto;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .h1{
+    font-size: 100px;
+  }
+  .registrieren, .demnachst {
+    padding: 15px 20px;
+    font-size: 20px;
+    max-width: 250px;
+    margin: 20px auto 0 auto;
+  }
+
+  .headerTextWrap {
+    margin-top: 140px;
+    margin-bottom: 60px;
+  }
+
+  .headerTextLeft, .headerTextRight {
+    img {
+      height: 60px;
+    }
+  }
+
+  /*Header Section Start*/
+  header {
+    .KickstarterFluid {
+      order: 2;
+      padding-top: 90px;
+      .KickstarterContainer {
+        .Kickstarter {
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+
+    }
+    .headerFluid {
+      position: fixed;
+      width: 100%;
+      z-index: 999;
+      .headerContainer {
+      }
+    }
+  }
+
+  /*Header Section End*/
+  /*Events Section Start*/
+  .eventsFluid {
+    min-height: 930px;
+    padding-bottom: 60px;
+    .eventsContainer {
+      .h1 {
+        margin-top: 90px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .h3 {
+        font-size: 38px;
+      }
+      .eventsJoinAccess {
+        position: static;
+        margin-top: 0;
+
+
+      }
+      .signMeUp {
+        position: static;
+
+      }
+      .eventsJoinAccessCol {
+        max-width: 680px;
+      }
+    }
+
+  }
+
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    max-width: 100%;
+    padding: 35px;
+    .h3 {
+      text-align: center;
+      font-size: 50px;
+    }
+    .h6{
+      margin-top: 0;
+    }
+    .email {
+      margin-bottom: 30px;
+    }
+    .signMeUp {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+
+  /* eventsJoinAccess End*/
+  /*Next Events Section Start*/
+  .nextEventsFluid {
+    padding-top: 30px;
+    .nextEventsContainer {
+      .h2 {
+        font-size: 68px;
+        padding-bottom: 30px;
+      }
+      .imgCalendarTitle {
+        width: 100%;
+      }
+      .calendarTitleInner {
+        width: 100%;
+      }
+      .currentDatecalendarDateInner {
+        justify-content: space-around;
+        width: 100%;
+      }
+      .nextEventInner {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      .calendarDescription {
+        width: 100%;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  /*calendarFluid start*/
+  .calendarFluid {
+    .orangeBg;
+    min-height: 0;
+    .calendarContainer {
+      .h2 {
+        margin: 0;
+        font-size: 55px;
+        padding: 20px 0;
+        text-align: center;
+      }
+    }
+  }
+
+  /*calendarFluid end*/
+  /* calendarEventsFluid Section Start*/
+  .calendarEventsFluid {
+    padding-bottom: 40px;
+    .calendarEventsContainer {
+      p {
+        font-size: 16px;
+      }
+      .h4 {
+        padding-top: 0;
+        padding-bottom: 20px;
+      }
+
+      .calendarWrapMore {
+        //border-radius: 20px;
+        padding: 25px 10px;
+
+        .calendarWrap {
+          text-align: center;
+          width: 100%;
+          flex-direction: column;
+
+        }
+        .calendarDateInnerDesc {
+          padding-top: 20px;
+          padding-bottom: 0;
+        }
+      }
+      .calendarTitleInner {
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 10px;
+        justify-content: space-around;
+        margin: 0 auto;
+
+      }
+      .calendarDateInner {
+
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .imgCalendar {
+        img {
+          margin-bottom: 10px;
+        }
+      }
+      .desc {
+        width: 40%;
+
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        p {
+          margin: 0 5px;
+        }
+
+      }
+
+      .currentDate {
+        width: 40%;
+
+        margin-bottom: 20px;
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+        p {
+          margin: 0 5px;
+        }
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+      }
+      .plusWrap {
+        width: 100%;
+      }
+      .plus {
+        width: 100%;
+        max-width: 200px;
+        height: 40px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        margin: 0 auto;
+
+        span {
+          font-size: 23px;
+        }
+      }
+
+      .h5 {
+        font-size: 23px;
+        line-height: 28px;
+      }
+      .h6 {
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    width: 100%;
+    .h3 {
+      text-align: center;
+    }
+    .email {
+      margin-bottom: 30px;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px;
+    }
+    .signMeUp {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  /* eventsJoinAccess End*/
+  /* calendarEventsFluid Section End*/
+  .greyEventsFluid {
+
+    .greyEventsContainer {
+      min-height: 450px;
+      .eventsJoinAccess {
+        border-radius: 0;
+        position: static;
+      }
+      .social {
+        margin-top: 70px;
+        height: auto;
+      }
+    }
+  }
+
+}
+
+/* Media queries */
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .h3{
+    font-size: 38px;
+  }
+  .headerTextLeft img, .headerTextRight img {
+    height: 70px;
+  }
+
+  .registrieren, .demnachst {
+    padding: 15px 25px;
+    font-size: 20px;
+    max-width: 300px;
+    margin: 20px auto 0 auto;
+  }
+
+  .headerTextWrap {
+    margin-top: 50px;
+    margin-bottom: 49px;
+  }
+
+  header {
+    .headerFluid {
+      .headerContainer {
+        .navMenu {
+          .ulNav {
+            li {
+              margin-right: 39px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*Events Section Start*/
+  .eventsFluid {
+    min-height: 820px;
+    padding-bottom: 60px;
+    .eventsContainer {
+      .h1 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+      .eventsJoinAccess {
+        position: static;
+        margin-top: 0;
+
+
+      }
+      .signMeUp {
+        position: static;
+
+      }
+      .eventsJoinAccessCol {
+        max-width: 100%;
+      }
+    }
+
+  }
+
+  /*Events Section End*/
+  /* eventsJoinAccess Start*/
+  .eventsJoinAccess {
+    max-width: 100%;
+    .h3 {
+      text-align: center;
+    }
+    .email {
+      margin-bottom: 30px;
+      border-radius: 7px;
+
+    }
+    .signMeUp {
+      width: 100%;
+      position: static;
+    }
+  }
+
+  /* eventsJoinAccess End*/
+  /*Next Events Section Start*/
+  .nextEventsFluid {
+    padding-top: 30px;
+    .nextEventsContainer {
+      .h2 {
+        font-size: 68px;
+        padding-bottom: 30px;
+      }
+      .imgCalendarTitle {
+        width: 100%;
+      }
+      .calendarTitleInner {
+        width: 100%;
+      }
+      .currentDatecalendarDateInner {
+        width: 100%;
+        justify-content: space-around;
+      }
+      .nextEventInner {
+        width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+      .calendarDescription {
+        width: 100%;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  /* calendarEventsFluid Section Start*/
+  .calendarEventsFluid {
+    padding-bottom: 50px;
+    .calendarEventsContainer {
+      p {
+        font-size: 16px;
+      }
+      .h4 {
+        padding-top: 0px;
+        padding-bottom: 30px;
+      }
+
+      .calendarWrapMore {
+        //border-radius: 20px;
+        padding: 25px 10px;
+
+        .calendarWrap {
+          text-align: center;
+          width: 100%;
+          flex-direction: column;
+
+        }
+        .calendarDateInnerDesc {
+          padding-top: 20px;
+          padding-bottom: 0;
+        }
+      }
+      .calendarTitleInner {
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 10px;
+        justify-content: space-around;
+        margin: 0 auto;
+
+      }
+      .calendarDateInner {
+
+        width: 100%;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .imgCalendar {
+        img {
+          margin-bottom: 10px;
+        }
+      }
+      .desc {
+        width: 40%;
+
+        margin-bottom: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        p {
+          margin: 0 5px;
+        }
+
+      }
+
+      .currentDate {
+        width: 40%;
+
+        margin-bottom: 20px;
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+        p {
+          margin: 0 5px;
+        }
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+      }
+      .currentDate {
+        width: 40%;
+
+        margin-bottom: 20px;
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+        p {
+          margin: 0 5px;
+        }
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+      }
+      .plusWrap {
+        width: 100%;
+      }
+      .plus {
+        width: 100%;
+        max-width: 200px;
+        height: 40px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        border-radius: 6px;
+        margin: 0 auto;
+
+        span {
+          font-size: 23px;
+        }
+      }
+
+      .h5 {
+        font-size: 23px;
+        line-height: 28px;
+      }
+      .h6 {
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  /* calendarEventsFluid Section End*/
+  /*calendarFluid start*/
+  .calendarFluid {
+    .orangeBg;
+    min-height: 0;
+    .calendarContainer {
+      .h2 {
+        margin: 0;
+        font-size: 64px;
+        padding: 30px 0;
+        text-align: center;
+      }
+    }
+  }
+
+  /*calendarFluid end*/
+  .greyEventsFluid {
+    .greyEventsContainer {
+      min-height: 450px;
+      .eventsJoinAccess {
+        border-radius: 0;
+        width: 100%;
+        position: static;
+      }
+      .social {
+        margin-top: 60px;
+        height: auto;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+  .nextEventsFluid {
+    padding-top: 60px;
+    .nextEventsContainer {
+      .nextEventInner {
+        max-width: 900px;
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .calendarEventsFluid {
+    .calendarEventsContainer {
+      .calendarWrap {
+        width: 96%;
+      }
+      .desc {
+        width: 40%;
+      }
+      .currentDate {
+        width: 40%;
+      }
+
+    }
+  }
+
+  .greyEventsFluid {
+    .greyEventsContainer {
+      .social {
+        height: 400px;
+      }
+    }
+
+    .h3 {
+      text-align: center;
+    }
+  }
+
+}
+
+
+
+
+
